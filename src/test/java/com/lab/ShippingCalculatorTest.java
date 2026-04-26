@@ -22,5 +22,11 @@ public class ShippingCalculatorTest {
     assertThrows(IllegalArgumentException.class,
         () -> calc.calculate(-1, "STANDARD"));
   }
+
+  @Test
+  void testNullType() {
+    // Lỗi sẽ xảy ra ở đây vì Code gọi null.equals("EXPRESS")
+    assertEquals(0, calc.calculate(5, null));
+  }
 }
 

@@ -8,7 +8,7 @@ public class ShippingCalculator {
     }
 
     // Sử dụng equalsIgnoreCase để tránh lỗi nếu truyền "express" thay vì "EXPRESS"
-    if ("EXPRESS".equalsIgnoreCase(type)) {
+    if (type.equals("EXPRESS")) {
       return (weight * 5000.0) + 20000.0;
     }
 
